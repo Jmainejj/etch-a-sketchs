@@ -1,19 +1,17 @@
-.mainDiv{
+.main-div{
     /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(16, 25px);
+}
 
+.block{
+background-color: white;
+height: 25px; 
+width: 25px;
+border: black solid 0.1px;
+/*   grid-gap: 0px; */
+/*   grid-column-start: 1 ; */
 }
-.col{
-    display: flex;
-
-  
-}
- .row{
-    height: 25px;
-    width: 25px;
-    /* color: blue; */
-    /* background-color: blue; */
-    border: black 1px solid;
-}
-.row:hover{
-    background-color: green;
+.block:hover{
+    background-color: blue;
 }
