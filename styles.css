@@ -8,10 +8,13 @@
 background-color: white;
 height: 25px; 
 width: 25px;
-border: black solid 0.1px;
+border: grey solid 0.1px;
 /*   grid-gap: 0px; */
 /*   grid-column-start: 1 ; */
 }
 .block:hover{
     background-color: blue;
+}
+.erase{
+     background-color: white;
 }

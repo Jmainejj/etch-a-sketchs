@@ -25,20 +25,40 @@ function board(){
     for (let i = 0; i < num**2; i++){
         let block = document.createElement('div')
         block.className = 'block'
-        block.textContent = i
+        // block.id = i
         mainDiv.append(block)
 
-        // let block = document.createElement('div')
-        // block.className = 'block'
-        // // block.style.grid
-        // block.textContent = i
-        // container.append(block)
+        block.addEventListener('mouseover', function(){
+            block.style.backgroundColor ='blue';
+        })
+        let box = document.createElement('div')
+        // box.className = 'black'
+        erase.addEventListener('click', function(){
+            block.addEventListener('mouseover', function(){
+                block.style.backgroundColor='white'
+            })
+        })
+        black.addEventListener('click', function(){
+            block.addEventListener('mouseover', function(){
+                block.style.backgroundColor='black'
+            })
+        })
+        blue.addEventListener('click', function(){
+            block.addEventListener('mouseover', function(){
+                block.style.backgroundColor='blue'
+            })
+        })
+
+        reset.addEventListener('click', function(){
+            document.location.reload()
+        })
+
     }
 }
 board()
 
-// document.body.append(buttonDiv)
-// buttonDiv.append(erase)
-// buttonDiv.append(black)
-// buttonDiv.append(blue)
-// buttonDiv.append(reset)
+document.body.append(buttonDiv)
+buttonDiv.append(erase)
+buttonDiv.append(black)
+buttonDiv.append(blue)
+buttonDiv.append(reset)
